@@ -45,6 +45,3 @@ def chatbot():
     mila_reply = n8n_data.get('response', 'Désolé, je n\'ai pas compris.')
     return jsonify({"response": mila_reply}), 200
 
-# Lancement du serveur Flask
-if __name__ == '__main__':
-    app.run(debug=True, port=5002)
