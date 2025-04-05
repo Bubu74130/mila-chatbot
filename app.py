@@ -45,6 +45,5 @@ def chatbot():
     mila_reply = n8n_data.get('response', 'Désolé, je n\'ai pas compris.')
     return jsonify({"response": mila_reply}), 200
 
-    # Pour que Gunicorn trouve l’objet Flask
-    application = app
-
+# 🔥 Ligne en dehors de toute fonction, à ne pas indenter !
+application = app
