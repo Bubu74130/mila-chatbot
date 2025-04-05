@@ -1,0 +1,37 @@
+.testimonials {
+    background-color: var(--beige-casse); /* Couleur neutre pour s’harmoniser */
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials h2 {
+    font-size: 1.8rem;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.testimonial {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid var(--dark-green);
+}
+
+.testimonial:last-child {
+    border-bottom: none;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    color: var(--dark-green);
+    margin: 0;
+}
+
+.testimonial span {
+    font-size: 0.9rem;
+    color: var(--light-green);
+    font-style: italic;
+}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mila - Health Assistant</title>
+<link rel="stylesheet" href="static/css/new_style.css">
+</head>
+<body>
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Mila, Your Health Guide</h1>
+      <p>More Energy, Less Sugar, A Transformed Body. Talk to Her Now!</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="chat-container">
+      <div class="chat-header">Chat with Mila 🤖</div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="bot-message">Bonjour ! Comment puis-je vous aider aujourd'hui ?</div>
+      </div>
+      <form id="chat-form" class="chat-input">
+        <input type="text" id="chat-input" placeholder="Écrivez votre message ici..." required />
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <section class="customer-reviews">
+      <h2 class="customer-reviews-title">What Our Customers Say</h2>
+      <div class="review"><p>⭐⭐⭐⭐⭐ <strong>"Mila transformed my routine!"</strong></p><p class="author">- Ahmed, Dubai</p></div>
+      <div class="review"><p>⭐⭐⭐⭐⭐ <strong>"Lost 15 kilos in two months."</strong></p><p class="author">- Sarah, NY</p></div>
+      <div class="review"><p>⭐⭐⭐⭐⭐ <strong>"Natural & effective ingredients."</strong></p><p class="author">- Claire, Paris</p></div>
+    </section>
+  </main>
+
+  <footer>&copy; 2025 Mila Health. All rights reserved.</footer>
+
+  <script>
+    document.getElementById("chat-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      let input = document.getElementById("chat-input");
+      let message = input.value.trim();
+      let chatMessages = document.getElementById("chat-messages");
+      if (message === "") return;
+
+      let userMessageDiv = document.createElement("div");
+      userMessageDiv.className = "user-message";
+      userMessageDiv.textContent = message;
+      chatMessages.appendChild(userMessageDiv);
+
+      fetch("/chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: message })
+      })
+      .then(response => response.json())
+      .then(data => {
+        let botMessageDiv = document.createElement("div");
+        botMessageDiv.className = "bot-message";
+        botMessageDiv.textContent = data.response;
+        chatMessages.appendChild(botMessageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      })
+      .catch(error => {
+        let errorDiv = document.createElement("div");
+        errorDiv.className = "bot-message";
+        errorDiv.textContent = "❌ Erreur de connexion au chatbot.";
+        chatMessages.appendChild(errorDiv);
+      });
+
+      input.value = "";
+    });
+  </script>
+</body>
+</html>
+

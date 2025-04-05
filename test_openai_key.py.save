@@ -1,0 +1,78 @@
+import openai
+import os
+from dotenv import load_dotenv
+
+# Charger la clé API depuis le fichier .env
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+try:
+    # Test simple de l'API avec une requête
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt="Hello, how are you?",
+        max_tokens=5
+    )
+    print("Clé API valide ! Réponse de l'API :", response.choices[0].text.strip())
+except openai.error.AuthenticationError:
+    print("Clé API invalide ou manquante. Vérifiez votre fichier .env.")
+except Exception as e:
+    print("Erreur lors de la requête à l'API :", str(e))
+import openai
+import os
+from dotenv import load_dotenv
+
+# Charger la clé API depuis le fichier .env
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+try:
+    # Test simple de l'API avec une requête
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt="Hello, how are you?",
+        max_tokens=5
+    )
+    print("Clé API valide ! Réponse de l'API :", response.choices[0].text.strip())
+except openai.error.AuthenticationError:
+    print("Clé API invalide ou manquante. Vérifiez votre fichier .env.")
+except Exception as e:
+    print("Erreur lors de la requête à l'API :", str(e))
+import openai
+import os
+from dotenv import load_dotenv
+
+# Charger la clé API depuis le fichier .env
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+try:
+    # Test simple de l'API avec une requête
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt="Hello, how are you?",
+        max_tokens=5
+    )
+    print("Clé API valide ! Réponse de l'API :", response.choices[0].text.strip())
+except openai.error.AuthenticationError:
+    print("Clé API invalide ou manquante. Vérifiez votre fichier .env.")
+except Exception as e:
+    print("Erreur lors de la requête à l'API :", str(e))
+import openai
+import os
+from dotenv import load_dotenv
+
+# Charger la clé API depuis le fichier .env
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+try:
+    # Test simple de l'API avec une requête
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt="Hello, how are you?",
+        max_tokens=5
+    )
+    print("Clé API valide ! Réponse de l'API :", response.choices[0].text.strip())
+except openai.error.AuthenticationError:
+    print("Clé API invalide ou man

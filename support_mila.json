@@ -1,0 +1,95 @@
+{
+  "products": {
+    "Puravive": {
+      "description": "Puravive is a natural weight management supplement that activates brown adipose tissue (BAT) to enhance fat burning and increase metabolism. It helps improve energy levels and supports a healthy weight balance.",
+      "pricing": {
+        "Basic": {
+          "quantity": "1 bottle - 30 Day Supply",
+          "old_price": "$129",
+          "discounted_price": "$59"
+        },
+        "Bundle": {
+          "quantity": "3 bottles - 90 Day Supply",
+          "old_price": "$381",
+          "discounted_price": "$147",
+          "bonuses": "2 Free Bonuses"
+        },
+        "Most Popular": {
+          "quantity": "6 bottles - 180 Day Supply",
+          "old_price": "$762",
+          "discounted_price": "$234",
+          "bonuses": "2 Free Bonuses + Free US Shipping"
+        }
+      },
+      "guarantee": "180-day money-back guarantee"
+    },
+
+    "Sugar Defender": {
+      "description": "Sugar Defender is a powerful supplement designed to regulate blood sugar levels naturally. It supports metabolism, reduces sugar cravings, and improves overall energy levels.",
+      "pricing": {
+        "Try Two": {
+          "quantity": "2 bottles - 60 Day Supply",
+          "old_price": "$358",
+          "discounted_price": "$138",
+          "savings": "$220"
+        },
+        "Most Popular": {
+          "quantity": "4 bottles - 120 Day Supply",
+          "old_price": "$716",
+          "discounted_price": "$236",
+          "savings": "$480",
+          "bonuses": "2 Free eBooks"
+        },
+        "Best Value": {
+          "quantity": "6 bottles - 180 Day Supply",
+          "old_price": "$1074",
+          "discounted_price": "$294",
+          "savings": "$780",
+          "bonuses": "2 Free eBooks + Free US Shipping"
+        }
+      },
+      "guarantee": "60-day money-back guarantee"
+    },
+
+    "Nagano Tonic": {
+      "description": "Nagano Tonic is a Japanese-inspired metabolism booster that helps with digestion, fat burning, and overall well-being. It includes natural ingredients that support weight loss in a healthy and sustainable way.",
+      "pricing": {
+        "Sample Package": {
+          "quantity": "1 bottle - 30 Day Supply",
+          "old_price": "$127",
+          "discounted_price": "$79",
+          "bonuses": "Additional guides"
+        },
+        "Great Value Package": {
+          "quantity": "3 bottles - 90 Day Supply",
+          "old_price": "$381",
+          "discounted_price": "$177",
+          "savings": "$204",
+          "bonuses": "3 Free Bonuses"
+        },
+        "Biggest Savings": {
+          "quantity": "6 bottles - 180 Day Supply",
+          "old_price": "$762",
+          "discounted_price": "$234",
+          "savings": "$528",
+          "bonuses": "3 Free Bonuses + Free US Shipping"
+        }
+      },
+      "guarantee": "180-day money-back guarantee"
+    }
+  },
+
+  "sales_tactics": {
+    "objection_handling": {
+      "too_expensive": "Our customers save a lot in the long run. Plus, we offer big discounts for bundles and a money-back guarantee for risk-free trials.",
+      "not_sure_it_works": "We have thousands of positive reviews and scientific research supporting our ingredients. Also, our 60/180-day guarantee ensures you see results, or you get your money back!",
+      "can_find_cheaper": "Unlike generic alternatives, our products use clinically tested ingredients and come with guarantees, bonuses, and real customer support."
+    },
+    "closing_strategies": {
+      "urgency": "Limited stock available due to high demand! Order now before supplies run out.",
+      "exclusivity": "Exclusive discount only available today! Don't miss out on this special deal.",
+      "bonuses": "You get FREE bonuses and free shipping on select bundles!"
+    }
+  }
+}
+

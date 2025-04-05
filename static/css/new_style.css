@@ -1,0 +1,200 @@
+html {
+  background-color: #fff;
+}
+
+:root {
+  --vert-fonce: #184A45;
+  --beige-casse: #E8E4D3;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; /* ✅ Supprime barre verticale */
+}
+
+/* === HERO SECTION (avec image Mila) === */
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: var(--beige-casse);
+  background: url("/static/images/Mila.png") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;           /* ✅ Remplit tout l’écran horizontalement */
+  height: 100vh;          /* ✅ Plein écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 90%;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.chat-wrapper {
+  position: absolute;
+  top: 105%; /* Ajuste ici pour monter ou descendre */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* Rend l'enveloppe "transparente" au clic */
+}
+
+/* === CHAT CONTAINER === */
+.chat-container {
+  pointer-events: all; /* Permet les clics dans le chat */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--vert-fonce);
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.chat-header {
+  background-color: var(--vert-fonce);
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+}
+
+.chat-messages {
+  height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-message, .bot-message {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 75%;
+  word-break: break-word;
+}
+
+.user-message {
+  background-color: var(--vert-fonce);
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.bot-message {
+  background-color: var(--beige-casse);
+  color: var(--vert-fonce);
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  background-color: var(--vert-fonce);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* === AVIS CLIENTS === */
+.customer-reviews {
+  background: var(--beige-casse);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.customer-reviews-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--vert-fonce);
+}
+
+.review {
+  margin-bottom: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--vert-fonce);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.author {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+}
+
+footer {
+  background-color: var(--beige-casse);
+  padding: 15px;
+  text-align: center;
+  color: var(--vert-fonce);
+  margin-top: auto;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .chat-container {
+    width: 95%;
+  }
+
+  .chat-input button {
+    padding: 10px;
+  }
+
+  .chat-input input {
+    font-size: 1rem;
+  }
+
+  .chat-messages {
+    height: 200px;
+  }
+}
+
